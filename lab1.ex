@@ -18,14 +18,24 @@ defmodule Cipocka do
       c = a - b
       IO.inspect(a: a, b: b, c: c, n: n)
 
-      for _ <- 0..(b - 1) do
-        IO.write(Enum.random(["a", "b"]))
+      if b > 0 do
+        for _ <- 0..(b - 1) do
+          IO.write(Enum.random(["a", "b"]))
+        end
+      end
+
+      if b <= 0 do
       end
 
       IO.write("b")
 
-      for _ <- 0..(c - 1) do
-        IO.write(Enum.random(["c", "d"]))
+      if c > 0 do
+        for _ <- 0..(c - 1) do
+          IO.write(Enum.random(["c", "d"]))
+        end
+      end
+
+      if c <= 0 do
       end
 
       IO.write("c")
